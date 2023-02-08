@@ -9,16 +9,26 @@
     <title>O nama | Udruga MiSiJa</title>
   </head>
   <body>
-    <!-- Header  -->
+    <!-- Header -->
     <header>
       <a href="index.html">
         <img src="./images/LOGO.png" />
       </a>
-      <button>
+      <button id="toggle">
         <img src="./images/bars-solid.svg" />
       </button>
+      <nav id="mainNavigation">
+        <ul>
+          <li><a href="onama.html">O nama</a></li>
+          <li>
+            <a href="projekti-i-aktivnosti.html">Projekti i aktivnosti</a>
+          </li>
+          <li><a href="novosti.html">Novosti</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
     </header>
-    <!-- / Header  -->
+    <!-- / Header -->
     <!-- Section - Hero  -->
     <section class="hero">
       <img src="./images/misija.jpg" alt="Članovi udruge MiSiJa" />
@@ -126,34 +136,34 @@
       <section class="reviews">
         <h2>Osvrti</h2>
         <figure>
-          <img src="./images//hrvoje.jpg" />
-          <figcaption><b>Hrvoje Nikolić</b>, predsjednik udruge</figcaption>
           <blockquote>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
             odit veritatis placeat odio nesciunt vitae delectus, voluptatum
             nulla eveniet id nemo iste ipsa repudiandae sed, expedita atque
             minima ea fugit.
           </blockquote>
+          <img src="./images//hrvoje.jpg" />
+          <figcaption><b>Hrvoje Nikolić</b>, predsjednik udruge</figcaption>
         </figure>
         <figure>
-          <img src="./images//hrvoje.jpg" />
-          <figcaption><b>Hrvoje Nikolić</b>, predsjednik udruge</figcaption>
           <blockquote>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
             odit veritatis placeat odio nesciunt vitae delectus, voluptatum
             nulla eveniet id nemo iste ipsa repudiandae sed, expedita atque
             minima ea fugit.
           </blockquote>
+          <img src="./images//hrvoje.jpg" />
+          <figcaption><b>Hrvoje Nikolić</b>, predsjednik udruge</figcaption>
         </figure>
         <figure>
-          <img src="./images//hrvoje.jpg" />
-          <figcaption><b>Hrvoje Nikolić</b>, predsjednik udruge</figcaption>
           <blockquote>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
             odit veritatis placeat odio nesciunt vitae delectus, voluptatum
             nulla eveniet id nemo iste ipsa repudiandae sed, expedita atque
             minima ea fugit.
           </blockquote>
+          <img src="./images//hrvoje.jpg" />
+          <figcaption><b>Hrvoje Nikolić</b>, predsjednik udruge</figcaption>
         </figure>
       </section>
 
@@ -173,7 +183,7 @@
       </article>
       <section class="pridruzenje">
         <h2>Želiš postati dio <b>naše priče?</b></h2>
-        <button>Pridruži se</button>
+        <a class="join" href="uclani-se.html" target="_blank">Pridruži se</a>
       </section>
     </main>
     <!-- / Main  -->
@@ -196,5 +206,6 @@
       </ul>
     </footer>
     <!-- / Footer  -->
+    <script src="main.js"></script>
   </body>
 </html>

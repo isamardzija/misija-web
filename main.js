@@ -3,6 +3,11 @@ const mainNavigation = document.querySelector("#mainNavigation");
 
 toggle.addEventListener("click", () => {
   mainNavigation.classList.toggle("hide");
+  if (mainNavigation.classList.contains("hide")) {
+    toggle.firstElementChild.src = "./images/bars-solid.svg";
+  } else if (!mainNavigation.classList.contains("hide")) {
+    toggle.firstElementChild.src = "./images/xmark-solid.svg";
+  }
 });
 
 if (window.innerWidth < 600) {

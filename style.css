@@ -102,7 +102,7 @@ article > *:not(img) {
   padding: var(--whitespace-big) var(--whitespace-small);
 }
 
-.pridruzenje button {
+.join {
   width: max(200px, 50%);
   margin: auto;
   font-size: var(--fontsize-big);
@@ -113,9 +113,10 @@ article > *:not(img) {
   border-radius: 5px;
   text-transform: uppercase;
   padding: var(--whitespace-small);
+  text-align: center;
 }
 
-.pridruzenje button:hover {
+.join:hover {
   cursor: pointer;
   outline: 3px solid var(--colors-primary-400);
 }
@@ -373,13 +374,12 @@ header ul li:hover {
     position: absolute;
     background-color: white;
     min-height: 80vh;
-    top: 100px;
-    right: 0;
+    top: 0;
+    left: 0;
     width: 80%;
     display: flex;
     justify-content: center;
     padding-block: var(--whitespace-big);
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
   }
   header nav ul {
     flex-direction: column;
@@ -389,7 +389,7 @@ header ul li:hover {
 }
 @media screen and (min-width: 600px) {
   header nav ul {
-    flex-direction: row-reverse;
+    flex-direction: row;
     gap: 2rem;
     width: 100%;
   }
