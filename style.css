@@ -16,9 +16,9 @@
 
   /* FONT SIZES */
   --fontsize-normal: clamp(1rem, 0.6479rem + 1.1268vw, 2rem);
-  --fontsize-big: clamp(1.5rem, 1.2359rem + 0.8451vw, 2.25rem);
-  --fontsize-bigger: clamp(1.875rem, 1.4789rem + 1.2676vw, 3rem);
-  --fontsize-huge: clamp(2rem, 0.5915rem + 4.507vw, 6rem);
+  --fontsize-big: clamp(1.5rem, 1.2359rem + 0.8451vw, 2rem);
+  --fontsize-bigger: clamp(1.875rem, 1.4789rem + 1.2676vw, 2.5rem);
+  --fontsize-huge: clamp(2rem, 0.5915rem + 4.507vw, 4rem);
 
   /* WHITESPACES */
   --whitespace-huge: 80px;
@@ -103,7 +103,7 @@ article > *:not(img) {
 }
 
 .pridruzenje button {
-  width: 200px;
+  width: max(200px, 50%);
   margin: auto;
   font-size: var(--fontsize-big);
   font-weight: var(--fontweight-bold);
@@ -170,7 +170,8 @@ h3 > span {
   color: var(--colors-primary-400);
 }
 
-p {
+p,
+.ukratko span {
   font-size: var(--fontsize-normal);
 }
 
@@ -204,7 +205,7 @@ a {
 }
 
 .ukratko img {
-  width: 150px;
+  width: max(150px, 50%);
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 20px;
@@ -303,6 +304,20 @@ blockquote {
 }
 
 /*   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   / */
+/* NOVOSTI */
+/*   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   / */
+.novosti article > img {
+  width: 400px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  float: left;
+  padding: var(--whitespace-medium);
+}
+
+article > h2 {
+  text-align: left;
+}
+/*   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   / */
 /* KONTAKT i UČLANJENJE*/
 /*   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   / */
 form {
@@ -337,4 +352,45 @@ form > button {
 form > button:hover {
   cursor: pointer;
   color: var(--colors-neutral-900);
+}
+
+/* SIDEBAR  */
+
+.hide {
+  display: none;
+}
+
+header nav ul {
+  list-style: none;
+  text-transform: uppercase;
+  display: flex;
+}
+header ul li:hover {
+  font-weight: var(--fontweight-bold);
+}
+@media screen and (max-width: 599px) {
+  header nav {
+    position: absolute;
+    background-color: white;
+    min-height: 80vh;
+    top: 100px;
+    right: 0;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    padding-block: var(--whitespace-big);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  }
+  header nav ul {
+    flex-direction: column;
+    gap: var(--whitespace-big);
+    text-align: center;
+  }
+}
+@media screen and (min-width: 600px) {
+  header nav ul {
+    flex-direction: row-reverse;
+    gap: 2rem;
+    width: 100%;
+  }
 }
