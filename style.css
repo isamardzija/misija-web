@@ -141,7 +141,7 @@ footer a {
   text-transform: uppercase;
 }
 footer a:hover {
-  font-weight: var(--fontweight-bold);
+  text-decoration: underline;
 }
 
 /*   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   / */
@@ -253,8 +253,6 @@ ul.oNama img {
 }
 
 /* OSVRTI */
-.reviews {
-}
 
 figure {
   display: flex;
@@ -330,7 +328,7 @@ form {
 }
 
 form > input {
-  padding-block: var(--whitespace-small);
+  padding: var(--whitespace-small);
   margin-bottom: var(--whitespace-medium);
 }
 
@@ -367,7 +365,7 @@ header nav ul {
   display: flex;
 }
 header ul li:hover {
-  font-weight: var(--fontweight-bold);
+  text-decoration: underline;
 }
 @media screen and (max-width: 599px) {
   header nav {
