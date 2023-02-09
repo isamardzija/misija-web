@@ -6,6 +6,9 @@ function join() {
   async function procUclanjenje(e) {
     e.preventDefault();
     const noviClanData = new FormData(uclaniSeForma);
+    const uclaniSeButton = document.querySelector("#uclaniSeButton");
+
+    uclaniSeButton.textContent = "Šaljem...";
     try {
       const res = await fetch(
         "https://cms.udrugamisija.hr/api/membership-requests",
@@ -18,6 +21,8 @@ function join() {
         }
       ).then((res) => res.json());
       uclaniSeForma.reset();
+      uclaniSeButton.textContent = "Učlani se";
+
       const successMessage = document.createElement("p");
       successMessage.classList.add("success");
       successMessage.textContent =
@@ -25,6 +30,8 @@ function join() {
       uclaniSeForma.appendChild(successMessage);
     } catch (error) {
       console.log("Došlo je do pogreške!", error);
+      uclaniSeButton.textContent = "Učlani se";
+
       const errorMessage = document.createElement("p");
       errorMessage.classList.add("error");
       errorMessage.textContent = "Došlo je do pogreške!";
