@@ -394,3 +394,20 @@ header ul li:hover {
     width: 100%;
   }
 }
+
+/* KONTAKT MESSAGES */
+
+.success,
+.error {
+  font-weight: var(--fontweight-bold);
+  text-align: center;
+  padding: 1rem;
+}
+
+.success {
+  border: 3px solid green;
+}
+
+.error {
+  border: 3px solid red;
+}
