@@ -305,17 +305,30 @@ blockquote {
 /*   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   / */
 /* NOVOSTI */
 /*   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   / */
-.novosti article > img {
-  width: 400px;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  float: left;
-  padding: var(--whitespace-medium);
+.novosti article {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
-article > h2 {
-  text-align: left;
+.novosti article > h2 {
+  flex-basis: 100%;
 }
+
+
+.novosti article > img {
+  max-width: 600px;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+}
+
+.novosti article > span {
+  font-size: var(--fontsize-normal);
+  font-weight: var(--fontweight-bold);
+}
+
+
 /*   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   / */
 /* KONTAKT i UČLANJENJE*/
 /*   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /   / */
